@@ -1,0 +1,262 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f6f0; /* Tom de fundo suave/palha */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    background-color: #7a2626; /* Vermelho terracota cultural */
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 5px solid #e5a93b; /* Detalhe em ouro/amarelo */
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- LAYOUT PRINCIPAL --- */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+/* --- MENU LATERAL (TEMAS) --- */
+nav {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+nav h2 {
+    font-size: 1.2rem;
+    color: #7a2626;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e5a93b;
+    padding-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.95rem;
+    display: block;
+    padding: 0.4rem 0.5rem;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #f5eae3;
+    color: #7a2626;
+    font-weight: bold;
+}
+
+/* --- ÁREA DO CONTEÚDO (MAIN) --- */
+main {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tema-tag {
+    background-color: #e5a93b;
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #7a2626;
+    margin-bottom: 1.5rem;
+}
+
+main p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* --- ESTILOS DOS FICHÁRIOS (ABAS) --- */
+.fichario-abas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    border-bottom: 3px solid #7a2626;
+    margin: 1.5rem 0 0 0;
+}
+
+.aba-btn {
+    background-color: #f5eae3;
+    color: #7a2626;
+    border: 1px solid #e5dbb9;
+    border-bottom: none;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.aba-btn:hover {
+    background-color: #ebd6c4;
+}
+
+.aba-btn.ativa {
+    background-color: #7a2626;
+    color: #ffffff;
+    border-color: #7a2626;
+}
+
+.ficha-conteudo {
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #e5dbb9;
+    border-top: none;
+    padding: 20px 0;
+    margin-bottom: 1.5rem;
+    animation: aparecer 0.3s ease;
+}
+
+.ficha-conteudo.ativa {
+    display: block;
+}
+
+.ficha-conteudo h3 {
+    color: #7a2626;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.lista-ingredientes {
+    margin-left: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.lista-ingredientes li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ESTRUTURA DOS 4 ESPAÇOS DE IMAGENS E COMIDAS --- */
+.galeria-pesquisa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 1.5rem; /* Espaço entre as fotos das comidas */
+    margin: 1.5rem 0;
+}
+
+.item-galeria {
+    display: flex;
+    flex-direction: column;
+    background: #fdfaf6;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e8dfd1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+    margin-bottom: 8px;
+}
+
+.item-galeria p {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
+}
+
+.referencia-imagem {
+    font-size: 0.75rem; /* Tamanho pequenininho para a referência */
+    color: #666666;
+    margin-top: auto; /* Empurra a referência para o rodapé do card */
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/* --- CRÉDITOS E RODAPÉ --- */
+.creditos-aluno {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #cccccc;
+    font-style: italic;
+    color: #666666;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE (PARA CELULARES) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    nav {
+        max-height: 250px;
+    }
+    .galeria-pesquisa {
+        grid-template-columns: 1fr; /* Em telas pequenas, as comidas ficam uma embaixo da outra */
+    }
+    .fichario-abas {
+        flex-direction: column;
+    }
+    .aba-btn {
+        border-radius: 6px;
+    }
+}

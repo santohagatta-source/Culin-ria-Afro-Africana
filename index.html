@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopédia Cultural: África e Afro-Brasil</title>
+    <!-- Este link conecta o HTML ao arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para os fichários (abas) dentro da pesquisa */
+        .fichario-abas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            border-bottom: 3px solid #8B4513;
+            margin: 25px 0 0 0;
+        }
+
+        .aba-btn {
+            background-color: #e9dec8;
+            color: #4a2508;
+            border: 1px solid #cbb894;
+            border-bottom: none;
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .aba-btn:hover {
+            background-color: #d8c6a3;
+        }
+
+        .aba-btn.ativa {
+            background-color: #8B4513;
+            color: #ffffff;
+            border-color: #8B4513;
+        }
+
+        .ficha-conteudo {
+            display: none;
+            background-color: #fffdf9;f
+            border: 1px solid #cbb894;
+            border-top: none;
+            padding: 25px;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 25px;
+            animation: aparecer 0.3s ease;
+        }
+
+        .ficha-conteudo.ativa {
+            display: block;
+        }
+
+        .ficha-conteudo h3 {
+            color: #8B4513;
+            margin-top: 0;
+        }
+
+        .lista-ingredientes li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .item-galeria img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Enciclopédia Cultural Afro-Brasileira</h1>
+        <p>Projeto Escolar - Resgatando Histórias, Culturas e Identidades</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- MENU LATERAL COM OS 17 TEMAS -->
+        <nav>
+            <h2>Temas de Pesquisa</h2>
+            <ul>
+                <li><a href="#">1. Personalidades Negras Históricas</a></li>
+                <li><a href="#">2. Arte Africana: Máscaras e Símbolos</a></li>
+                <li><a href="#">3. Adinkras e Seus Significados</a></li>
+                <li><a href="#">4. Influência Africana na Música</a></li>
+                <li><a href="#">5. Manifestações Culturais</a></li>
+                <li><a href="#">6. Literatura Afro-Brasileira</a></li>
+                <li><a href="#">7. Representatividade nas Artes Visuais</a></li>
+                <li><a href="#" style="font-weight: bold;">8. Culinária Afro-Brasileira</a></li>
+                <li><a href="#">9. Religiões de Matriz Africana</a></li>
+                <li><a href="#">10. Quilombos e Resistência</a></li>
+                <li><a href="#">11. Zumbi e Dandara dos Palmares</a></li>
+                <li><a href="#">12. Capoeira e Cultura</a></li>
+                <li><a href="#">13. Estética e Identidade Negra</a></li>
+                <li><a href="#">14. Influências na Língua Portuguesa</a></li>
+                <li><a href="#">15. Ciência, Educação e Tecnologia</a></li>
+                <li><a href="#">16. África Contemporânea</a></li>
+                <li><a href="#">17. Combate ao Racismo</a></li>
+            </ul>
+        </nav>
+
+        <!-- ÁREA DE PESQUISA DO ALUNO -->
+        <main>
+            <span class="tema-tag">Tema 8 • Culinária Afro-Brasileira</span>
+
+            <h2>Culinária Afro-Brasileira: Origens, Sabores e Ancestralidade</h2>
+
+            <!-- ABAS DO FICHÁRIO -->
+            <div class="fichario-abas" role="tablist">
+                <button class="aba-btn ativa" onclick="abrirFicha(event, 'ficha-origens')">1. Origens Históricas</button>
+                <button class="aba-btn" onclick="abrirFicha(event, 'ficha-ingredientes')">2. Ingredientes</button>
+                <button class="aba-btn" onclick="abrirFicha(event, 'ficha-pratos')">3. Pratos Típicos (Fotos)</button>
+                <button class="aba-btn" onclick="abrirFicha(event, 'ficha-cultura')">4. Resistência e Cultura</button>
+               <button class="aba-btn" onclick="abrirFicha(event, 'ficha-conclusão')">5. Conclusão</button>
+            </div>
+
+            <!-- FICHA 1: ORIGENS HISTÓRICAS -->
+            <div id="ficha-origens" class="ficha-conteudo ativa">
+                <h3>As Raízes Históricas e a Diáspora Africana</h3>
+                <p>
+                    A culinária afro-brasileira é um dos legados mais profundos da diáspora africana no Brasil. Trazida principalmente por povos bantos, iorubás (nagôs) e jejes entre os séculos XVI e XIX, ela transformou a gastronomia nacional, com destaque especial para o Recôncavo Baiano e o Nordeste.
+                </p>
+                <p>
+                    Ao chegarem ao Brasil em condições de escravidão, os africanos adaptaram suas técnicas ancestrais de moagem, fermentação e cocção aos ingredientes nativos (como a mandioca, o milho e frutos do mar). Dessa mistura nasceu uma cozinha rica em aromas, cores vibrantes e significado espiritual.
+                </p>
+            </div>
+
+            <!-- FICHA 2: INGREDIENTES FUNDAMENTAIS -->
+            <div id="ficha-ingredientes" class="ficha-conteudo">
+                <h3>Ingredientes que Moldaram a Cozinha Brasileira</h3>
+                <p>
+                    Muitos alimentos hoje indispensáveis na mesa do brasileiro vieram diretamente da África ou foram ressignificados pelas cozinheiras africanas e afro-brasileiras:
+                </p>
+                <ul class="lista-ingredientes">
+                    <li><strong>Azeite de Dendê:</strong> Extraído do fruto do dendezeiro (originário da costa ocidental da África), confere cor alaranjada intensa e sabor inconfundível.</li>
+                    <li><strong>Quiabo:</strong> Vegetal de origem africana muito usado em refogados e pratos ritualísticos, como o caruru e o frango com quiabo.</li>
+                    <li><strong>Feijão-Fradinho:</strong> Base essencial para o preparo do acarajé e do abará, trazido da África Ocidental.</li>
+                    <li><strong>Pimenta Malagueta e Gengibre:</strong> Especiarias fundamentais que trazem ardência e complexidade aromática aos caldos e molhos.</li>
+                    <li><strong>Inhame e Cará:</strong> Tubérculos energéticos que garantiam sustento e faziam parte tanto da alimentação cotidiana quanto das oferendas sagradas.</li>
+                </ul>
+            </div>
+
+            <!-- FICHA 3: PRATOS TÍPICOS E GALERIA DE FOTOS -->
+            <div id="ficha-pratos" class="ficha-conteudo">
+                <h3>Pratos Típicos e Suas Histórias</h3>
+                <p>
+                    Confira quatro pratos emblemáticos que representam a herança gastronômica afro-brasileira:
+                </p>
+
+                <!-- GALERIA COM OS 4 ESPAÇOS DE IMAGEM E REFERÊNCIA -->
+                <div class="galeria-pesquisa">
+                    
+                    <!-- Bloco Imagem 1 -->
+                    <div class="item-galeria">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Acarajé frito no azeite de dendê">
+                        <p><strong>1. Acarajé:</strong> Bolinho de feijão-fradinho batido com cebola e frito no dendê, servido com vatapá, caruru e camarão seco.</p>
+                        <span class="referencia-imagem">Fonte/Referência: Acervo Ilustrativo / Patrimônio Cultural do IPHAN</span>
+                    </div>
+
+                    <!-- Bloco Imagem 2 -->
+                    <div class="item-galeria">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Vatapá cremoso com dendê e camarão">
+                        <p><strong>2. Vatapá:</strong> Creme aveludado preparado com pão ou farinha, leite de coco, amendoim, castanha-de-caju, camarão seco e dendê.</p>
+                        <span class="referencia-imagem">Fonte/Referência: Acervo Ilustrativo / Gastronomia Baiana</span>
+                    </div>
+
+                    <!-- Bloco Imagem 3 -->
+                    <div class="item-galeria">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Caruru feito com quiabos refogados">
+                        <p><strong>3. Caruru:</strong> Cozido tradicional de quiabos cortados com camarão seco, cebola, castanhas e azeite de dendê, muito presente em festas religiosas.</p>
+                        <span class="referencia-imagem">Fonte/Referência: Acervo Ilustrativo / Culinária de Matriz Africana</span>
+                    </div>
+
+                    <!-- Bloco Imagem 4 -->
+                    <div class="item-galeria">
+                        <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=600&q=80" alt="Feijoada completa">
+                        <p><strong>4. Feijoada:</strong> Símbolo nacional que une o feijão-preto e carnes suínas salgadas, transformado pela criatividade alimentar nas senzalas e quilombos.</p>
+                        <span class="referencia-imagem">Fonte/Referência: Acervo Ilustrativo / História da Alimentação no Brasil</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FICHA 4: RESISTÊNCIA E CULTURA -->
+            <div id="ficha-cultura" class="ficha-conteudo">
+                <h3>Resistência, Sagrado e Identidade</h3>
+                <p>
+                    Na cultura afro-brasileira, o ato de cozinhar ultrapassa a nutrição: é memória, religiosidade e resistência política. Nos terreiros de Candomblé e nos quilombos, as receitas eram transmitidas oralmente de geração em geração, preservando idiomas africanos e laços comunitários.
+                </p>
+                <p>
+                    Além disso, o ofício das <strong>Baianas de Acarajé</strong> — reconhecido como Patrimônio Cultural Imaterial do Brasil pelo IPHAN — garantiu historicamente o sustento e a autonomia financeira de milhares de mulheres negras, mantendo viva a história do Brasil em cada tabuleiro.
+                </p>
+            </div>
+
+           <!-- FICHA 5: Conclusão-->
+            <div id="ficha-conclusão" class="ficha-conteudo">
+                <h3>Conclusão</h3>
+                <p>
+                    ​Esta pesquisa mostrou que a culinária afro-brasileira é muito mais do que a mistura de ingredientes e temperos: ela é parte viva da nossa história e da nossa identidade. Pratos como o acarajé, o vatapá, o caruru e a feijoada carregam a ancestralidade e a resistência dos povos africanos que vieram para o Brasil. Conclui-se que valorizar essa culinária é essencial para reconhecer a importância da cultura negra na formação da sociedade brasileira.
+                </p>
+                
+            </div>
+            <!-- ALUNO: Nome, número e turma -->
+            <div class="creditos-aluno">
+                <p><strong>Desenvolvido por: Fernando Davantel, Hagatta Braga, Julia Oliveira, Kevin dos Santos, Pietro Reysel, Rafael Victor e Vitor Mesquita. </strong> </p>
+                <p><strong>Turma:</strong> 1°Ano B</p>
+            </div>
+        </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Feira Cultural e Tecnológica Escolar. Todos os direitos reservados aos estudantes.</p>
+    </footer>
+
+    <!-- SCRIPT PARA ALTERNAR ENTRE OS FICHÁRIOS -->
+    <script>
+        function abrirFicha(evento, idFicha) {
+            // Esconde todas as fichas
+            const fichas = document.querySelectorAll('.ficha-conteudo');
+            fichas.forEach(ficha => ficha.classList.remove('ativa'));
+
+            // Remove o destaque de todos os botões
+            const botoes = document.querySelectorAll('.aba-btn');
+            botoes.forEach(botao => botao.classList.remove('ativa'));
+
+            // Mostra a ficha selecionada e destaca o botão clicado
+            document.getElementById(idFicha).classList.add('ativa');
+            evento.currentTarget.classList.add('ativa');
+        }
+    </script>
+
+</body>
+</html>
